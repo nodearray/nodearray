@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="811" height="286" viewBox="0 0 811 286" role="img" aria-label="NODEARRAY">
+  <title>NODEARRAY</title>
+  <defs>
+    <linearGradient id="verlauf" x1="0" y1="0" x2="748" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5eead4"/>
+      <stop offset="0.5" stop-color="#60a5fa"/>
+      <stop offset="1" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="glanz" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#fff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="befehl-clip"><rect class="tippen" x="200.0" y="40" width="168.0" height="24"/></clipPath>
+    <clipPath id="kunst-clip"><rect class="drucken" x="32" y="82" width="747.6" height="126"/></clipPath>
+    <mask id="glanz-maske"><g fill="#fff"><text x="32" y="96"  textLength="747.6" lengthAdjust="spacing" xml:space="preserve">S$    S$   $S$$S$   $S$$S$$   S$$S$$S$    S$$S    $S$$S$$   S$$S$$S     S$$S    $S    $S </text><text x="32" y="111"  textLength="747.6" lengthAdjust="spacing" xml:space="preserve">$$S   $$  $S    $S  S$    S$  $$         S$  $$   S$    S$  $$    $$   S$  $$   S$    S$ </text><text x="32" y="126"  textLength="747.6" lengthAdjust="spacing" xml:space="preserve">$$$$  $S  S$    S$  $$    $$  $S        S$    S$  $$    $$  $S    $S  S$    S$   $S  S$  </text><text x="32" y="141"  textLength="747.6" lengthAdjust="spacing" xml:space="preserve">S$ S$ S$  $$    $$  $S    $S  S$$S$$    $$    $$  $$$$S$$   S$$S$$S   $$    $$    $$S$   </text><text x="32" y="156"  textLength="747.6" lengthAdjust="spacing" xml:space="preserve">$$  $S$$  $S    $S  S$    S$  $$        $$$$S$$S  S$  $$    $$  $S    $$$$S$$S     S$    </text><text x="32" y="171"  textLength="747.6" lengthAdjust="spacing" xml:space="preserve">$S   $$S  S$    S$  $$    $$  $S        S$    S$  $$   S$   $S   $$   S$    S$     $$    </text><text x="32" y="186"  textLength="747.6" lengthAdjust="spacing" xml:space="preserve">S$    S$   $S$$S$   $S$$S$$   S$$S$$S$  $$    $$  $S    $S  S$    S$  $$    $$     $S    </text></g></mask>
+  </defs>
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: 13px; }
+    .titel { fill: #8b949e; font-size: 12px; }
+    .prompt { fill: #7ee787; }
+    .pfad { fill: #79c0ff; }
+    .cmd { fill: #e6edf3; }
+    .vorne { fill: url(#verlauf); font-weight: 700; }
+    .schatten { fill: #3b4b6b; }
+    .tippen { transform-box: fill-box; transform-origin: left; transform: scaleX(0);
+      animation: tippen 1.1s steps(20) 0.5s forwards; }
+    .drucken { transform-box: fill-box; transform-origin: left; transform: scaleX(0);
+      animation: tippen 1.4s steps(44) 1.9s forwards; }
+    @keyframes tippen { to { transform: scaleX(1); } }
+    .cursor1 { animation: blinken 1s step-end 0s 2, weg 0s 1.6s forwards; }
+    .cursor2 { opacity: 0; animation: an 0s 3.5s forwards, blinken 1s step-end 3.5s infinite; }
+    .zeile2 { opacity: 0; animation: an 0s 3.5s forwards; }
+    @keyframes blinken { 50% { opacity: 0; } }
+    @keyframes weg { to { opacity: 0; } }
+    @keyframes an { to { opacity: 1; } }
+    .glanz { animation: glanz 4s ease-in-out 3.6s infinite; transform: translateX(-200px); }
+    @keyframes glanz { 0% { transform: translateX(-200px); } 60%, 100% { transform: translateX(948px); } }
+  </style>
+
+  <!-- Fenster -->
+  <rect x="0.5" y="0.5" width="810" height="285" rx="12" fill="#0d1117" stroke="#30363d"/>
+  <path d="M0.5 12.5a12 12 0 0 1 12-12h786a12 12 0 0 1 12 12v19h-810z" fill="#161b22"/>
+  <line x1="0.5" y1="31.5" x2="810.5" y2="31.5" stroke="#30363d"/>
+  <circle cx="20" cy="16" r="6" fill="#ff5f57"/>
+  <circle cx="40" cy="16" r="6" fill="#febc2e"/>
+  <circle cx="60" cy="16" r="6" fill="#28c840"/>
+  <text x="406" y="20" text-anchor="middle" class="titel">nodearray@github: ~ — zsh</text>
+
+  <!-- Zeile 1: Befehl wird getippt -->
+  <text x="32" y="58" textLength="168.0" lengthAdjust="spacing" xml:space="preserve"><tspan class="prompt">nodearray@github</tspan><tspan class="cmd">:</tspan><tspan class="pfad">~</tspan><tspan class="cmd">$ </tspan></text>
+  <g clip-path="url(#befehl-clip)"><text x="200.0" y="58" class="cmd" textLength="168.0" lengthAdjust="spacing" xml:space="preserve">./wordmark.sh --name</text></g>
+  <rect class="cursor1" x="200.0" y="46" width="8" height="15" fill="#e6edf3"/>
+
+  <!-- Schriftzug wird ausgegeben -->
+  <g clip-path="url(#kunst-clip)">
+    <text x="32" y="96" class="vorne" textLength="747.6" lengthAdjust="spacing" xml:space="preserve">S$    S$   $S$$S$   $S$$S$$   S$$S$$S$    S$$S    $S$$S$$   S$$S$$S     S$$S    $S    $S </text>
+    <text x="32" y="111" class="schatten" textLength="747.6" lengthAdjust="spacing" xml:space="preserve">        +   ++++      ++++      ++++++-    ++       ++++      ++++       ++       +     +</text>
+    <text x="32" y="111" class="vorne" textLength="747.6" lengthAdjust="spacing" xml:space="preserve">$$S   $$  $S    $S  S$    S$  $$         S$  $$   S$    S$  $$    $$   S$  $$   S$    S$ </text>
+    <text x="32" y="126" class="schatten" textLength="747.6" lengthAdjust="spacing" xml:space="preserve">        +   +     +   +     +   +         +-        +     +   +     +   +-             +-</text>
+    <text x="32" y="126" class="vorne" textLength="747.6" lengthAdjust="spacing" xml:space="preserve">$$$$  $S  S$    S$  $$    $$  $S        S$    S$  $$    $$  $S    $S  S$    S$   $S  S$  </text>
+    <text x="32" y="141" class="schatten" textLength="747.6" lengthAdjust="spacing" xml:space="preserve">  +     +   +     +   +     +             +     +        +-        +-   +     +       +- </text>
+    <text x="32" y="141" class="vorne" textLength="747.6" lengthAdjust="spacing" xml:space="preserve">S$ S$ S$  $$    $$  $S    $S  S$$S$$    $$    $$  $$$$S$$   S$$S$$S   $$    $$    $$S$   </text>
+    <text x="32" y="156" class="schatten" textLength="747.6" lengthAdjust="spacing" xml:space="preserve">  +     +   +     +   +     +   ++++-           +   ++  +-    ++  +-          +      +-  </text>
+    <text x="32" y="156" class="vorne" textLength="747.6" lengthAdjust="spacing" xml:space="preserve">$$  $S$$  $S    $S  S$    S$  $$        $$$$S$$S  S$  $$    $$  $S    $$$$S$$S     S$    </text>
+    <text x="32" y="171" class="schatten" textLength="747.6" lengthAdjust="spacing" xml:space="preserve">  +     +   +     +   +     +   +         ++++  +   +         +         ++++  +      +   </text>
+    <text x="32" y="171" class="vorne" textLength="747.6" lengthAdjust="spacing" xml:space="preserve">$S   $$S  S$    S$  $$    $$  $S        S$    S$  $$   S$   $S   $$   S$    S$     $$    </text>
+    <text x="32" y="186" class="schatten" textLength="747.6" lengthAdjust="spacing" xml:space="preserve">  +     +        +-        +-             +     +   +         +         +     +      +   </text>
+    <text x="32" y="186" class="vorne" textLength="747.6" lengthAdjust="spacing" xml:space="preserve">S$    S$   $S$$S$   $S$$S$$   S$$S$$S$  $$    $$  $S    $S  S$    S$  $$    $$     $S    </text>
+    <text x="32" y="201" class="schatten" textLength="747.6" lengthAdjust="spacing" xml:space="preserve"> +-    +-   +++++-   ++++++-   +++++++-  +-    +-  +-    +-  +-    +-  +-    +-     +-   </text>
+    <g mask="url(#glanz-maske)"><rect class="glanz" x="-68" y="82" width="120" height="126" fill="url(#glanz)"/></g>
+  </g>
+
+  <!-- Zeile 2: neuer Prompt mit blinkendem Cursor -->
+  <text x="32" y="238" class="zeile2" textLength="168.0" lengthAdjust="spacing" xml:space="preserve"><tspan class="prompt">nodearray@github</tspan><tspan class="cmd">:</tspan><tspan class="pfad">~</tspan><tspan class="cmd">$ </tspan></text>
+  <rect class="cursor2" x="200.0" y="226" width="8" height="15" fill="#e6edf3"/>
+</svg>
