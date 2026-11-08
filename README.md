@@ -4,9 +4,7 @@
 
 ### about
 
-I'm learning Python, building desktop apps with Electron and Supabase, and I like trying out new tools. My current project is **Flimmer**, a desktop hub for watching series.
-
-🌐 [nodearray.github.io/flimmer](https://nodearray.github.io/flimmer/)
+I'm learning Python, building desktop apps with Electron and Supabase, and I like trying out new tools.
 
 ---
 
