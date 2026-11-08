@@ -4,7 +4,12 @@
 
 ### about
 
-I'm learning Python, building desktop apps with Electron and Supabase, and I like trying out new tools.
+I like building things and taking tools apart to see how they work.
+
+- 🐍 learning **Python**, one project at a time
+- 🖥️ building desktop apps with **Electron** + **Supabase**
+- 🔐 curious about security, poking at things with **Burp Suite**
+- 🌱 getting into **open source**, one small fix at a time
 
 ---
 
