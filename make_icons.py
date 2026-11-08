@@ -1,6 +1,8 @@
-"""Builds tech-stack.svg: the tech-stack icon row as one local image.
+"""Builds icons/<name>.svg: one local image per tech-stack icon.
 
 Usage:  python make_icons.py
+Each icon is its own <img> in the README, so its title shows on hover.
+The script prints the matching README HTML at the end.
 
 Most tiles come from skillicons.dev (dark theme). Burp Suite is not available
 there, so its tile is drawn here in the same style (logo path from Simple Icons, CC0).
@@ -10,9 +12,17 @@ import re
 import urllib.request
 from pathlib import Path
 
-ICONS = ["py", "electron", "nodejs", "supabase", "docker", "burpsuite", "git", "github", "windows"]
-
-TILE, STEP = 256, 300  # same tile size and spacing as skillicons.dev
+ICONS = {
+    "py": "Python",
+    "electron": "Electron",
+    "nodejs": "Node.js",
+    "supabase": "Supabase",
+    "docker": "Docker",
+    "burpsuite": "Burp Suite",
+    "git": "Git",
+    "github": "GitHub",
+    "windows": "Windows",
+}
 
 BURP_SUITE = (
     '<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">'
@@ -35,18 +45,18 @@ def fetch_tile(name):
     return inner.group(1)
 
 
-def build_svg():
-    width = len(ICONS) * STEP - (STEP - TILE)
-    tiles = "\n".join(
-        f'  <g transform="translate({i * STEP}, 0)">{fetch_tile(name)}</g>' for i, name in enumerate(ICONS)
-    )
-    return (
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width * 48 // TILE}" height="48" '
-        f'viewBox="0 0 {width} {TILE}" fill="none">\n{tiles}\n</svg>\n'
-    )
+def readme_html():
+    tags = [
+        f'  <img src="./icons/{name}.svg" alt="{label}" title="{label}" height="48">'
+        for name, label in ICONS.items()
+    ]
+    return "<p>\n" + "\n".join(tags) + "\n</p>"
 
 
 if __name__ == "__main__":
-    target = Path(__file__).with_name("tech-stack.svg")
-    target.write_text(build_svg(), encoding="utf-8")
-    print(f"{len(ICONS)} icons -> {target}")
+    folder = Path(__file__).with_name("icons")
+    folder.mkdir(exist_ok=True)
+    for name in ICONS:
+        (folder / f"{name}.svg").write_text(fetch_tile(name) + "\n", encoding="utf-8")
+    print(f"{len(ICONS)} icons -> {folder}\n")
+    print(readme_html())
